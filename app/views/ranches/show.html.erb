@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ranch %>
+
+<div>
+  <%= link_to "Edit this ranch", edit_ranch_path(@ranch) %> |
+  <%= link_to "Back to ranches", ranches_path %>
+
+  <%= button_to "Destroy this ranch", @ranch, method: :delete %>
+</div>
