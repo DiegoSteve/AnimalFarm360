@@ -1,6 +1,21 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
+  before_action :configure_sign_in_params, only: [:create]
+
+  protected
+
+  def configure_sign_in_params
+    devise_parameter_sanitizer.permit(:sign_in, keys: [:email])
+  end
+
+  def after_sign_in_path_for(resource)
+    if resource.ranch
+        ranch_path(resource.ranch)
+      else
+        new_ranch_path
+    end
+  end
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

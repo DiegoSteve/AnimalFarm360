@@ -1,18 +1,21 @@
+# app/controllers/ranches_controller.rb
 class RanchesController < ApplicationController
-  before_action :set_ranch, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  before_action :set_ranch, only: %i[show edit update destroy]
 
   # GET /ranches or /ranches.json
   def index
-    @ranches = Ranch.all
+    @ranch = current_user.ranch
   end
 
   # GET /ranches/1 or /ranches/1.json
   def show
+    puts @ranch
   end
 
   # GET /ranches/new
   def new
-    @ranch = Ranch.new
+    @ranch = current_user.build_ranch
   end
 
   # GET /ranches/1/edit
@@ -21,7 +24,7 @@ class RanchesController < ApplicationController
 
   # POST /ranches or /ranches.json
   def create
-    @ranch = Ranch.new(ranch_params)
+    @ranch = current_user.build_ranch(ranch_params)
 
     respond_to do |format|
       if @ranch.save
@@ -59,12 +62,16 @@ class RanchesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_ranch
-      @ranch = Ranch.find(params[:id])
+  def set_ranch
+    @ranch = current_user.ranch
+    unless @ranch
+      redirect_to new_ranch_path, alert: "No tienes un rancho actualmente. Por favor, crea uno nuevo."
     end
+  end
+    
 
     # Only allow a list of trusted parameters through.
-    def ranch_params
-      params.require(:ranch).permit(:name, :location)
-    end
+  def ranch_params
+    params.require(:ranch).permit(:name, :location)
+  end
 end

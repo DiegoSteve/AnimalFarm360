@@ -6,4 +6,7 @@
     <%= image_tag 'granja2.jpg', alt: 'Imagen de la granja' %>
   </div>
   <a href="<%= new_user_session_path %>" class="btn">Vamos a tu granja</a>
+  <% if user_signed_in? %>
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn" %>
+  <% end %>
 </div>
