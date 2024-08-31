@@ -1,0 +1,13 @@
+<div class="full-screen-background">
+  <div class="ranch-create-container">
+    <h1>Crea tu nuevo rancho <%= current_user.email %></h1>
+
+    <div class="form-container">
+      <%= render "form", ranch: @ranch %>
+    </div>
+
+    <div class="back-link">
+      <%= link_to "Back to ranches", ranches_path %>
+    </div>
+  </div>
+</div>

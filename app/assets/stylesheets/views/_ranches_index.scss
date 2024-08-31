@@ -1,0 +1,86 @@
+.notice {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+  
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+.ranch-background {
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+  
+#ranches {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para resaltar el contenido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+.no-ranch {
+    background-color: rgba(255, 230, 230, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    color: #c0392b;
+  
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+  
+    .new-ranch-link {
+      margin-top: 20px;
+  
+      a {
+        padding: 10px 20px;
+        background-color: #27ae60;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #2ecc71;
+        }
+      }
+    }
+  }
+  
+  .new-ranch-link {
+    margin-top: 20px;
+  
+    a {
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #2ecc71;
+      }
+    }
+  }
+  

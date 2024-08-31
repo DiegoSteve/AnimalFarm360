@@ -1,0 +1,26 @@
+<div class="ranch-background" style="background-image: url('<%= asset_path('notienesrancho.jpeg') %>'); background-size: cover; background-position: center center;">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Ranches</h1>
+  <% if @ranch %>
+    <div id="ranches">
+      <h1><%= @ranch.name %></h1>
+      <p>Ubicación: <%= @ranch.location %></p>
+      <%= link_to "Ver rancho", ranch_path(@ranch) %>
+    </div>
+  <% else %>
+    <div class="no-ranch">
+      <h1>No tienes ranchos</h1>
+      <p>Actualmente no tienes ranchos registrados en el sistema.</p>
+      <div class="new-ranch-link">
+        <%= link_to "Crea un nuevo rancho", new_ranch_path %>
+      </div>
+    </div>
+  <% end %>
+
+  <% unless @ranch %>
+    <!-- Este enlace es opcional si ya has añadido otro arriba -->
+  <% else %>
+    <p>Ya tienes un rancho. No puedes crear otro.</p>
+  <% end %>
+</div>

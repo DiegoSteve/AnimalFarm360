@@ -1,0 +1,65 @@
+.notice {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+  
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+p {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 30px;
+}
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  
+    a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+  
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+  
+    .destroy-button {
+      display: inline-block;
+      background-color: #e74c3c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #c0392b;
+      }
+    }
+  }
+
+.ranch-background {
+    background: url('/assets/ranch_background.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+  
+  
