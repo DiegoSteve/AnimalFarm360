@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @corral %>
+
+<div>
+  <%= link_to "Edit this corral", edit_corral_path(@corral) %> |
+  <%= link_to "Back to corrals", corrals_path %>
+
+  <%= button_to "Destroy this corral", @corral, method: :delete %>
+</div>
