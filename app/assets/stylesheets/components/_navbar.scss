@@ -1,0 +1,48 @@
+nav {
+  background-color: antiquewhite; /* Color de fondo */
+  height: 6%; /* Altura fija de la navbar */
+  position: fixed; /* Fija la navbar en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex; /* Alineación horizontal de los elementos */
+  align-items: center; /* Centrado vertical de los elementos */
+  padding: 0 20px; /* Espaciado interno a los lados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra para destacarla */
+}
+
+.container-nav-devise {
+  display: flex;
+  justify-content: space-between; /* Espacia el logo y los enlaces */
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+.menu-devise {
+  display: flex;
+  justify-content: flex-end; /* Alínea los enlaces a la derecha */
+  align-items: center;
+  flex-direction: row;
+}
+
+.menu-devise a, .menu-devise button {
+  color: #e91e63; /* Color de texto */
+  text-decoration: none;
+  margin-left: 20px; /* Espaciado entre los elementos */
+  font-size: 1em; /* Tamaño de fuente */
+  background-color: ghostwhite;
+}
+
+.menu-devise button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-devise .links.active {
+  color: #ffffff; /* Color cuando está activo */
+}
+
+
