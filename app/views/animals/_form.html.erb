@@ -1,0 +1,82 @@
+<%= form_with(model: animal) do |form| %>
+  <% if animal.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+
+      <ul>
+        <% animal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :species, style: "display: block" %>
+    <%= form.text_field :species %>
+  </div>
+
+  <div>
+    <%= form.label :breed, style: "display: block" %>
+    <%= form.text_field :breed %>
+  </div>
+
+  <div>
+    <%= form.label :birthdate, style: "display: block" %>
+    <%= form.date_field :birthdate %>
+  </div>
+
+  <div>
+    <%= form.label :initial_weight, style: "display: block" %>
+    <%= form.text_field :initial_weight %>
+  </div>
+
+  <div>
+    <%= form.label :gender, style: "display: block" %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :acquisition_date, style: "display: block" %>
+    <%= form.date_field :acquisition_date %>
+  </div>
+
+  <div>
+    <%= form.label :supplier, style: "display: block" %>
+    <%= form.text_field :supplier %>
+  </div>
+
+  <div>
+    <%= form.label :health_history, style: "display: block" %>
+    <%= form.text_area :health_history %>
+  </div>
+
+  <div>
+    <%= form.label :production, style: "display: block" %>
+    <%= form.text_area :production %>
+  </div>
+
+  <div>
+    <%= form.label :comments, style: "display: block" %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div>
+    <%= form.label :corral_id, style: "display: block" %>
+    <%= form.text_field :corral_id %>
+  </div>
+
+  <div>
+    <%= form.label :ranch_id, style: "display: block" %>
+    <%= form.text_field :ranch_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
