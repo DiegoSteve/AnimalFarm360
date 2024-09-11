@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def after_sign_in_path_for(resource)
     if resource.ranch
-        ranch_path(resource.ranch)
+        ranches_path(resource.ranch)
       else
         new_ranch_path
     end

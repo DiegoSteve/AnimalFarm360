@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Corrals</h1>
+
+<div id="corrals">
+  <% @corrals.each do |corral| %>
+    <%= render corral %>
+    <p>
+      <%= link_to "Show this corral", corral %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New corral", new_corral_path %>

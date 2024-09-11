@@ -1,0 +1,29 @@
+<!-- app/views/layouts/_navbar_home.html.erb -->
+<nav class="navbar">
+  <div class="container">
+    <%= link_to 'AnimalFarm360', root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" id="navbar-toggler">
+      &#9776;
+    </button>
+    <div class="navbar-collapse" id="navbar-menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <%= link_to 'Inicio', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'A cerca de', '#features', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Contacto', '#contact', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Iniciar Sesión', new_user_session_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Registrarse', new_user_registration_path, class: 'nav-link btn btn-primary text-white' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
